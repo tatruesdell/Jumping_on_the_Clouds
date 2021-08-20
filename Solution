@@ -1,0 +1,16 @@
+The first step in solving this problem is to identify those clouds which must be avoided (they have a value of 1 inside the array/list). We must also keep in mind 
+that there is a limit of 2 spaces we may jump, from cloud to cloud. For example, given the array [0, 0, 1, 0, 0] a player can jump from cloud 0 to 1 but not from 
+cloud 0 to 3. The goal is to find the shortest path from the first cloud to the last, and we know from the problem description that such a path will always exist. 
+
+The pseudocode will look something like this:
+
+function solution(clouds):
+  current, steps = 0
+  stop = clouds.length()
+  
+  while current != stop:
+    # check if clouds[current + 2] equals 0
+    # if so, current += 2 and steps += 1
+    # else, current += 1 and steps += 1
+  return steps 
+      
